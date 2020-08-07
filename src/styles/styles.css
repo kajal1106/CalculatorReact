@@ -66,13 +66,14 @@ body {
 
 /* Layout */
 .app {
+  /*This will cover the complete viewport height and width, as well as place the calculator in the middle (vertically and horizontally). */
   height: 100vh;
   width: 100%;
   background-image: linear-gradient(
       rgba(16, 29, 44, 0.93),
       rgba(16, 29, 44, 0.93)
     ),
-    url("../styles/img/bg-small.jpg");
+    url(https://i.pinimg.com/originals/91/b5/cd/91b5cdab51e207263169904b227503b4.jpg);
   background-size: cover;
 
   display: flex;
