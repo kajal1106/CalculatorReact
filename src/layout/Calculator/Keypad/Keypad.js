@@ -5,6 +5,7 @@ import Button from "../../../components/Button/Button";
 import LargeButton from "../../../components/Button/LargeButton";
 
 const keypad = (props) => (
+  // passing a unique display value to each Button component.
   <section className="keypad">
     {/* ROW  #1 */}
     <KeypadRow>
