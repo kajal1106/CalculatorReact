@@ -47,6 +47,7 @@ class Calculator extends React.Component {
   render() {
     return (
       <main className="calculator">
+        {/* Adding screen component to display the result in main application */}
         <Screen equation={this.state.equation} result={this.state.result} />
         <Keypad onButtonPress={this.onButtonPress} />
       </main>
