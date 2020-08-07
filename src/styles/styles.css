@@ -1,0 +1,224 @@
+/*
+    0-600px:   Phone
+    600-900px: Tablet portrait
+    900-1200px: Tablet landscape
+    [1200-1800] is where our normal style apply
+    1800px +:    Big Desktop
+
+    
+    $breakpoint argument choices:
+    -phone
+    -Tablet portrait
+    -Tablet landscape
+    -Big desktop
+
+
+ORDER: Base + Typography > general layout + grid >page layout > components
+    1em = 16px
+*/
+
+/* CSS Reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+/* COLORS */
+:root {
+  --color-primary: #55c57a;
+  --color-primary-light: rgba(126, 213, 111, 0.8);
+  --color-primary-dark: rgba(40, 180, 133, 0.8);
+
+  --color-secondary-light: #decba4;
+  --color-secondary-dark: #3e5151;
+
+  --color-tertiary-light: #2998ff;
+  --color-tertiary-dark: #5643fa;
+
+  --color-grey-light-1: #f7f7f7;
+  --color-grey-light-2: #eee;
+
+  --color-grey-dark: #777;
+  --color-grey-dark-2: #999;
+  --color-grey-dark-3: #333;
+
+  --color-white: #fff;
+  --color-black: #000;
+
+  --shadow: rgba(0, 0, 0, 0.4);
+
+  /*FONT*/
+  --default-font-size: 1.6rem;
+}
+
+/* Layout */
+.app {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(
+      rgba(16, 29, 44, 0.93),
+      rgba(16, 29, 44, 0.93)
+    ),
+    url("../styles/img/bg-small.jpg");
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+}
+
+/* Calculator */
+.calculator {
+  height: 80vh;
+  width: 25%;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
+  background-color: var(--color-grey-light-2);
+}
+@media only screen and (max-width: 75em) {
+  .calculator {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .calculator {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 112.5em) {
+  .calculator {
+    width: 33.3333%;
+  }
+}
+
+/* Screen */
+.screen {
+  height: 25vh;
+  width: 100%;
+  padding: 0 2rem;
+  overflow: hidden;
+  white-space: nowrap;
+
+  color: var(--color-grey-light-2);
+  background-image: linear-gradient(to right bottom, #3e5151, #decba4);
+}
+
+.computation-screen {
+  height: 6vh;
+  font-size: 2.5rem;
+  /* To display the value at the bottom-right of the container */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.result-screen {
+  height: 19vh;
+  font-size: 6rem;
+  font-weight: 600;
+  /* To display the value at the bottom-right of the container */
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+/* Keypad */
+.keypad {
+  height: 55vh;
+  width: 100%;
+}
+
+.keypad__row {
+  height: 11vh; /* (80vh calculator - 25vh screen) / 5 keypadRow components = 11vh */
+  width: 100%;
+  display: flex; /* To control the dimension */
+}
+
+/* Button */
+.btn {
+  width: 25%;
+  height: 100%;
+  font-size: 3rem;
+  font-family: inherit;
+  background-color: var(--color-grey-light-1);
+  border: 1px solid transparent;
+  outline: none;
+  color: var(--color-grey-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: var(--color-grey-light-2);
+  background-image: linear-gradient(to right bottom, #3e5151, #decba4);
+}
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  -webkit-transform: scaleX(1.4) scaleY(1.6);
+  -moz-transform: scaleX(1.4) scaleY(1.6);
+  -ms-transform: scaleX(1.4) scaleY(1.6);
+  -o-transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn:active,
+.btn:focus {
+  outline: none;
+  transform: translateY(-0.1rem);
+  -webkit-transform: translateY(-0.1rem);
+  -moz-transform: translateY(-0.1rem);
+  -ms-transform: translateY(-0.1rem);
+  -o-transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.btn--large {
+  width: 50%;
+  color: var(--color-grey-light-1);
+  background-image: linear-gradient(to right bottom, #decba4, #3e5151);
+}
+
+.btn--large:hover {
+  background-color: var(--color-grey-light-2);
+  color: var(--color-grey-dark-3);
+}
+.btn--large:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  -webkit-transform: scaleX(1.4) scaleY(1.6);
+  -moz-transform: scaleX(1.4) scaleY(1.6);
+  -ms-transform: scaleX(1.4) scaleY(1.6);
+  -o-transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+
+.btn--primary {
+  color: var(--color-secondary-dark);
+}
+
+.btn--operator {
+  color: var(--color-secondary-dark);
+}
