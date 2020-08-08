@@ -97,7 +97,7 @@ body {
   background-color: var(--color-grey-light-2);
   box-shadow: 0px 20px 120px -20px rgba(0, 0, 0, 0.7);
 }
-@media only screen and (max-width: 75em) {
+/* @media only screen and (max-width: 75em) {
   .calculator {
     width: 50%;
   }
@@ -112,6 +112,18 @@ body {
 @media only screen and (min-width: 112.5em) {
   .calculator {
     width: 33.3333%;
+  }
+} */
+
+@media screen and (max-width: 1280px) {
+  .calculator {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .calculator {
+    width: 80%;
   }
 }
 
