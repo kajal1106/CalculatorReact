@@ -103,12 +103,6 @@ body {
   }
 }
 
-@media only screen and (max-width: 56.25em) {
-  .calculator {
-    width: 55%;
-  }
-}
-
 @media only screen and (min-width: 112.5em) {
   .calculator {
     width: 50%;
