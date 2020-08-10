@@ -1,3 +1,5 @@
+// Calculaor.js Component file
+
 import React from "react";
 
 import Screen from "./Screen/Screen";

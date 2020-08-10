@@ -1,3 +1,5 @@
+//// Screen.js Layout file
+
 import React from "react";
 
 import ResultScreen from "./ResultScreen";

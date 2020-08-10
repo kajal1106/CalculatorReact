@@ -1,3 +1,5 @@
+//// ResultScreen.js Layout file
+
 import React from "react";
 
 const resultScreen = (props) => (

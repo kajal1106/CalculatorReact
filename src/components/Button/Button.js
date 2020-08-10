@@ -1,3 +1,4 @@
+// Button.js Component file
 import React from "react";
 
 const button = (props) => {
