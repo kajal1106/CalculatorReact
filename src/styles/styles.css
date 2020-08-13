@@ -30,8 +30,6 @@ ORDER: Base + Typography > general layout + grid >page layout > components
 
 html {
   font-size: 62.5%;
-  /* font-family: "Open Sans", sans-serif; */
-  /* font-family: "Mulish", sans-serif; */
   font-family: "Quicksand", sans-serif;
 }
 
